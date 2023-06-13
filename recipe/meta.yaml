@@ -1,5 +1,5 @@
 {% set name = "qiskit-ibm-runtime" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qiskit-ibm-runtime-{{ version }}.tar.gz
-  sha256: bcc4337c8e3c036d7e98b3d7ddcb31875831826d581b7fa1ccc0a050d9c12665
+  sha256: 92ef1d9ce29b9688b715541a263f49ce0936c5c2d94c6e115f23bdc14a840342
 
 build:
   noarch: python
@@ -16,10 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
   run:
-    - python >=3.7
+    - qiskit-ibm-provider >=0.5.3
+    - python >=3.8
     - qiskit-terra >=0.24.0
     - requests >=2.19
     - requests_ntlm >=1.1.0
@@ -27,7 +28,6 @@ requirements:
     - urllib3 >=1.21.1
     - python-dateutil >=2.8.0
     - websocket-client >=1.5.1
-    - typing-extensions >=4.0.0
     - ibm-platform-services >=0.22.6
 
 test:

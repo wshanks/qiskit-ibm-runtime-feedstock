@@ -4,6 +4,7 @@ github:
 bot:
   inspection: update-grayskull
   automerge: true
+  check_solvable: true
 conda_forge_output_validation: true
 conda_build:
   pkg_format: '2'
